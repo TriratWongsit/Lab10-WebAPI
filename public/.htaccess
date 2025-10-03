@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /appliances_api/public/
+# ส่งทุก request ไปที่ index.php (ยกเว้นไฟล์จริง)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L,QSA]
